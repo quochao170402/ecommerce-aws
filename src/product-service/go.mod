@@ -1,4 +1,4 @@
-module github.com/quochao170402/ecommerce-aws
+module github.com/quochao170402/ecommerce-aws/product-service
 
 go 1.24.6
 

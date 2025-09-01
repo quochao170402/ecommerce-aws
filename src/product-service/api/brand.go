@@ -8,9 +8,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/dynamodb/types"
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
-	"github.com/quochao170402/ecommerce-aws/internal/domain"
-	"github.com/quochao170402/ecommerce-aws/internal/repository"
-	"github.com/quochao170402/ecommerce-aws/middleware"
+	"github.com/quochao170402/ecommerce-aws/product-service/internal/domain"
+	"github.com/quochao170402/ecommerce-aws/product-service/internal/repository"
+	"github.com/quochao170402/ecommerce-aws/product-service/middleware"
 )
 
 type BrandRequest struct {

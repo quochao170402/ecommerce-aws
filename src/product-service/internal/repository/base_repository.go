@@ -7,8 +7,8 @@ import (
 
 	"github.com/aws/aws-sdk-go-v2/service/dynamodb"
 	"github.com/aws/aws-sdk-go-v2/service/dynamodb/types"
-	"github.com/quochao170402/ecommerce-aws/internal/domain"
-	"github.com/quochao170402/ecommerce-aws/service"
+	"github.com/quochao170402/ecommerce-aws/product-service/internal/domain"
+	"github.com/quochao170402/ecommerce-aws/product-service/service"
 )
 
 // UpdateOptions provides configuration for update operations

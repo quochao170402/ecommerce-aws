@@ -6,9 +6,9 @@ import (
 
 	"github.com/aws/aws-sdk-go-v2/service/dynamodb"
 	"github.com/gin-gonic/gin"
-	"github.com/quochao170402/ecommerce-aws/api"
-	"github.com/quochao170402/ecommerce-aws/internal/domain"
-	"github.com/quochao170402/ecommerce-aws/internal/repository"
+	"github.com/quochao170402/ecommerce-aws/product-service/api"
+	"github.com/quochao170402/ecommerce-aws/product-service/internal/domain"
+	"github.com/quochao170402/ecommerce-aws/product-service/internal/repository"
 )
 
 func SetupRoutes(router *gin.Engine, cfg *Config) {

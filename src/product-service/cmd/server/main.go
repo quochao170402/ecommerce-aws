@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/quochao170402/ecommerce-aws/configs"
+	"github.com/quochao170402/ecommerce-aws/product-service/configs"
 )
 
 func main() {

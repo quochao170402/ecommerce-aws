@@ -6,8 +6,8 @@ import (
 
 	"github.com/aws/aws-sdk-go-v2/feature/dynamodb/expression"
 	"github.com/aws/aws-sdk-go-v2/service/dynamodb"
-	"github.com/quochao170402/ecommerce-aws/internal/domain"
-	"github.com/quochao170402/ecommerce-aws/service"
+	"github.com/quochao170402/ecommerce-aws/product-service/internal/domain"
+	"github.com/quochao170402/ecommerce-aws/product-service/service"
 )
 
 type ProductRepository interface {
