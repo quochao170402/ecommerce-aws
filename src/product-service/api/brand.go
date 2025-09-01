@@ -32,6 +32,7 @@ func RegisterBrandRoutes(rg *gin.RouterGroup, repo repository.BaseRepository[dom
 
 	rg.GET("", handler.GetAll)
 	rg.POST("", handler.AddBrand)
+	rg.POST("batch", handler.AddBatchBrand)
 	rg.GET("/:id", middleware.UUIDParamMiddleware("id"), handler.GetBrandById)
 	rg.PUT("/:id", middleware.UUIDParamMiddleware("id"), handler.UpdateBrand)
 	rg.DELETE("/:id", middleware.UUIDParamMiddleware("id"), handler.DeleteBrand)
@@ -199,4 +200,45 @@ func (h *BrandHandler) DeleteBrand(c *gin.Context) {
 		Success: true,
 		Message: "Delete brand successfull",
 	})
+}
+
+func (h *BrandHandler) AddBatchBrand(c *gin.Context) {
+	brands := []domain.Brand{
+		{
+			Id:   uuid.NewString(),
+			Name: uuid.NewString(),
+		},
+		{
+			Id:   uuid.NewString(),
+			Name: uuid.NewString(),
+		},
+		{
+			Id:   uuid.NewString(),
+			Name: uuid.NewString(),
+		},
+		{
+			Id:   uuid.NewString(),
+			Name: uuid.NewString(),
+		},
+		{
+			Id:   uuid.NewString(),
+			Name: uuid.NewString(),
+		},
+	}
+
+	count, err := h.repo.SaveBatch(c, &brands)
+
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, BaseResponse{
+			Success: false,
+			Message: err.Error(),
+		})
+		return
+	}
+
+	c.JSON(http.StatusOK, BaseResponse{
+		Success: true,
+		Data:    count,
+	})
+
 }
