@@ -26,7 +26,7 @@ func NewRoleHandler(roleRepo repository.IRoleRepository,
 func RegisterRoleRoutes(rg *gin.RouterGroup, roleRepo repository.IRoleRepository,
 	userRepo repository.IUserRepository) {
 	RoleHandler := NewRoleHandler(roleRepo, userRepo)
-	rg.Use(middleware.AuthMiddleware(), middleware.RequireRole("ADMIN"))
+	// rg.Use(middleware.AuthMiddleware(), middleware.RequireRole("ADMIN"))
 
 	rg.GET("", RoleHandler.GetRoles)
 	rg.POST("", RoleHandler.AddRole)

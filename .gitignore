@@ -34,3 +34,69 @@ Thumbs.db
 # Environment files
 .env
 .env.*
+
+
+
+# ======================
+# C# / .NET
+# ======================
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+[Tt]est[Rr]esult*/
+[Aa]ppPackages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.history/
+*.code-workspace
+
+# Rider IDE
+.idea/
+
+# NuGet packages
+*.nupkg
+*.snupkg
+*.nuspec
+packages/
+*.nuget.props
+*.nuget.targets
+
+# Others
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+*.dotCover
+*.coverage
+*.coveragexml
+
+# Azure & Publish
+PublishProfiles/
+*.pubxml
+*.publishsettings
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Entity Framework
+*.dbmdl
+*.jfm
+
+# SQL Server files
+*.mdf
+*.ldf
+
+# Windows
+ehthumbs.db
+Desktop.ini

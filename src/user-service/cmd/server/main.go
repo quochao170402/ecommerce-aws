@@ -15,8 +15,8 @@ func main() {
 		return
 	}
 
-	db := cfg.Database
-	configs.InitDatabase(db)
+	// db := cfg.Database
+	// configs.InitDatabase(db)
 
 	router := gin.Default()
 	configs.SetupRoutes(router, cfg)
